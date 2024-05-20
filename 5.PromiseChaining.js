@@ -21,12 +21,6 @@ let promise2 = (number) => {
 };
 
 promise
-    .then((mathRandom) => {
-        return promise2(mathRandom);
-    })
-    .then((result) => {
-        console.log(result);
-    })
-    .catch((err) => {
-        console.error(err)
-    });
+    .then((mathRandom) => promise2(mathRandom))
+    .then((result) => console.log(result))
+    .catch((err) => console.error(err))
